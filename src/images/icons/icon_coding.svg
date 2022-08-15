@@ -1,0 +1,11 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110px" height="110px" viewbox="0 20 220 198" xml:space="preserve">
+ <g id="icon_3d">
+  <g>
+   <rect x="61.7" y="103.2" transform="matrix(0.3026 -0.9531 0.9531 0.3026 -27.7185 182.1183)" class="iconstroke" width="97.7" height="13.5" />
+   <path class="iconstroke" d="M69.4,79.2l-55.1,22.4c-3.4,1.4-5.5,4.6-5.5,8.2c0,3.6,2.2,6.8,5.5,8.2l55.1,22.4l5.1-12.5l-44.5-18.1
+   l44.5-18.1L69.4,79.2z" />
+   <path class="iconstroke" d="M205.8,101.6l-55.1-22.4l-5.1,12.5l44.5,18.1l-44.5,18.1l5.1,12.5l55.1-22.4c3.4-1.4,5.5-4.6,5.5-8.2
+   C211.3,106.2,209.1,103,205.8,101.6z" />
+  </g>
+ </g>
+</svg>

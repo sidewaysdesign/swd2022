@@ -1,0 +1,206 @@
+@import './mixins.pcss';
+@import './breakpoints.pcss';
+
+.whatcanido {
+  overflow-x: hidden;
+  position: relative;
+  display: block;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 0;
+  &:before {
+    body.touch-capable & {
+      mask-image: linear-gradient(linear, left 25%, left top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0.5)));
+    }
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    background-image: url(../images/arc_whatcanido.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: 17.3vw;
+  }
+  & > * {
+    position: relative;
+  }
+  margin-top: -5.5rem;
+  @mixin uptoMd {
+    margin-top: -2.2rem;
+  }
+  @mixin atMd {
+    margin-top: -6vw;
+  }
+  & > h2 {
+    margin-top: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  h2 {
+    margin-top: 2.75rem !important;
+    text-shadow: 1px 1px 0 var(--deepblue), 0.125rem 0.125rem 0 var(--deepblue), 0.25rem 0.25rem 0 var(--tomato);
+    position: relative;
+    transform: translateY(0.4375rem);
+    z-index: 1;
+    @mixin atSm {
+      min-width: 90%;
+      margin-top: 1.875rem !important;
+      margin-bottom: 0.75rem;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
+  }
+  p {
+    text-shadow: 1px 1px 1px var(--midnight);
+  }
+}
+.whatcanido-bkg {
+  /* background-color: $whatcanido-bkg; */
+  /* background-color: $arc_top_white; */
+  background: linear-gradient(to bottom, var(--deepblue) 0%, var(--deepblue) 1rem, var(--deepblue-trans) 50%);
+  padding-bottom: 2rem;
+}
+
+.whatcanido-mark {
+  width: 10rem;
+  margin-top: 1.5vw;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 0.5rem;
+  @mixin uptoSm {
+    width: 90%;
+    margin-top: 1.5rem;
+    height: auto;
+  }
+  @mixin atLg {
+    margin-top: 2rem;
+    width: 50%;
+  }
+
+  @mixin atLg {
+    width: 27%;
+  }
+}
+.wcidfy {
+  &__unit {
+    text-align: center;
+    position: relative;
+    h2 {
+      margin-top: 4.2rem;
+      font-size: 2.25rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 2rem;
+    }
+    h3 {
+      color: white;
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      @mixin atSm {
+        letter-spacing: 0.12em;
+      }
+      width: auto;
+    }
+    svg {
+      transform-origin: 50% 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 90px;
+      width: 100%;
+      @mixin atSm {
+        width: 2rem;
+        opacity: 1;
+        width: 110px;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          -ms-transform: none;
+          top: 0 !important;
+          margin-top: -0.75rem;
+          padding-left: 4%;
+          padding-right: 8%;
+        }
+      }
+    }
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    @mixin atSm {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    @mixin atMd {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+  }
+  &__group {
+    @mixin atSm {
+      margin: 0.5rem 0;
+    }
+    h3 {
+      color: var(--tomato);
+      text-align: center;
+      @mixin atSm {
+        margin-left: 0;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+      @mixin atSmmd {
+        margin-top: -0.75em;
+      }
+    }
+    @mixin atSm {
+      font-size: 0.9rem;
+      line-height: 1.33;
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @mixin atSmmd {
+      p:last-child {
+        margin-bottom: 1rem;
+      }
+    }
+    p {
+      width: 100%;
+      @mixin atSmmd {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem !important;
+      }
+      @mixin atLg {
+        width: 90%;
+      }
+    }
+  }
+
+  &:last-child {
+    margin-bottom: -1rem;
+  }
+}
+#wcidfy--component {
+  .row {
+    justify-content: center;
+  }
+}
+.iconstroke {
+  fill: none !important;
+  stroke: #a7c2d7;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-opacity: 0.97;
+}

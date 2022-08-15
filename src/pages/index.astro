@@ -1,0 +1,39 @@
+---
+// Component Imports
+import MainHead from '../components/MainHead.astro';
+// import Button from '../components/Button/index.jsx';
+import Intro from '../components/Intro/Intro.astro';
+// import Footer from '../components/Footer/index.jsx';
+import Logomark from '../components/Logomark/Logomark.svelte';
+import WhatCanIDoForYou from '../components/WhatCanIDoForYou/WhatCanIDoForYou.svelte';
+import SecretSauce from '../components/SecretSauce/SecretSauce.astro';
+import Testimonials from '../components/Testimonials/Testimonials.svelte';
+
+// Data Fetching: List all Markdown postSo, s in the repo.
+const projects = await Astro.glob('./project/**/*.md');
+const featuredProject = projects[0];
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="en">
+<head>
+	<MainHead
+	title="Sideways Design"
+	description="Portfolio website for Sideways Design, a web &amp; print design and development agency."
+	/>
+</head>
+<body>
+	<div class="fullwrapper">
+	<Logomark client:load />
+	<Intro />
+	 <div class="whatcanido">
+        <h2>What can I do <span class="nobreak">for you?</span></h2>
+      </div>
+	<WhatCanIDoForYou />
+	<SecretSauce />
+	<Testimonials client:load />
+</div>
+</body>
+</html>

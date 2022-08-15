@@ -1,0 +1,189 @@
+@import './mixins.pcss';
+@import './breakpoints.pcss';
+
+$animTime: 0.6s;
+$animTime2: 1.5s;
+$animTime3: 2.25s;
+$perword: 0.5s;
+
+.testimonials {
+  &--wrapper,
+  &--container,
+  &--content {
+    position: relative;
+  }
+  &--wrapper {
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    &:before {
+      content: '';
+      top: 0;
+      width: 100%;
+      left: 0;
+      position: absolute;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNjkiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDEwMCAxNSI+PHBhdGggZmlsbD0iI2Q4NGEwZSIgZD0iTTAsOTEuMmgxMDBWNUM4My44LDEuNyw2Ny4xLDAsNTAsMFMxNi4yLDEuNywwLDVWOTEuMnoiLz48L3N2Zz4=');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      min-height: 17.3vw;
+      height: 100%;
+    }
+  }
+  &--container {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    flex-direction: column;
+    @mixin atMd {
+      padding: 2rem 2rem 0 2rem;
+    }
+  }
+  &--content {
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    flex-direction: row;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &--unit {
+    width: 0;
+    display: block;
+    z-index: -1;
+    display: block;
+    font-size: 0.92rem;
+    filter: blur(1rem);
+    opacity: 0;
+    left: 50%;
+    transition: $animTime opacity ease, $animTime filter ease;
+    @mixin atSmmd {
+      font-size: 0.92rem;
+    }
+    &.visible {
+      opacity: 1;
+      & > div::before {
+        left: -0.1em;
+        opacity: 0.33;
+        @mixin atSmmd {
+          left: -0.2em;
+          opacity: 0.7;
+        }
+      }
+      & > div::after {
+        right: -0.1em;
+        opacity: 0.33;
+        @mixin atSmmd {
+          right: -0.2em;
+          opacity: 0.7;
+        }
+      }
+      & > div span {
+        opacity: 1;
+        transition-delay: 50s;
+        @for $count from 1 to 120 by 1 {
+          &:nth-child($count) {
+            transition-delay: calc($count * 0.045s);
+          }
+        }
+      }
+    }
+    &.sharpen {
+      filter: blur(0);
+    }
+    & > div {
+      box-sizing: border-box;
+      opacity: 1;
+      transform: translateX(-50%);
+      width: calc(100vw - 3.5rem);
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      word-spacing: 0.015em;
+      line-height: 1.45;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+      @mixin atSm {
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+        line-height: 1.6;
+      }
+      opacity: 1;
+      @mixin atMd {
+        width: calc(100vw - 7rem);
+        max-width: 700px;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
+      @mixin atLg {
+        max-width: 870px;
+      }
+      &::before,
+      &::after {
+        font-size: 12.75rem;
+        color: #9ab7cc;
+        line-height: 1;
+        position: absolute;
+        font-family: 'Playfair Display';
+        z-index: -1;
+        transition: $animTime2 left cubic-bezier(0.17, 0.41, 0.62, 1), $animTime2 right cubic-bezier(0.17, 0.41, 0.62, 1), $animTime3 opacity cubic-bezier(0.42, 0, 0.3, 1);
+        @mixin atSmmd {
+          font-size: 8.75rem;
+        }
+        @mixin atMd {
+          font-size: 9.75rem;
+        }
+      }
+      &::before {
+        top: -0.3em;
+        left: calc(50% - 0.22em);
+        content: '“';
+        opacity: 0;
+        @mixin atSmmd {
+          top: -0.1875em;
+        }
+      }
+      &::after {
+        bottom: -0.65em;
+        content: '”';
+        opacity: 0;
+        right: calc(50% - 0.22em);
+        @mixin atSmmd {
+          bottom: -0.55em;
+        }
+      }
+      span {
+        opacity: 0;
+        transition: $perword all ease;
+
+        &.span-as-paragraph {
+          display: inline-block;
+          margin: 0 0.75ex 0 0;
+          line-height: 1.75;
+          padding: 0;
+          &:first-child::before {
+            content: none;
+          }
+        }
+      }
+    }
+    .accreditation {
+      text-align: right;
+      margin: 1rem 1rem 0 0;
+      font-weight: lighter;
+      line-height: 1.45;
+      font-style: italic;
+      &:before {
+        content: '– ';
+      }
+    }
+  }
+}

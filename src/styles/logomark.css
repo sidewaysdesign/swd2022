@@ -1,0 +1,85 @@
+#logomark {
+  @mixin transition-300;
+  z-index: 100;
+  display: block;
+  position: fixed;
+  top: 0;
+  padding: 0.25rem 0 0 0;
+  width: 100%;
+  left: 50%;
+  margin-left: -50%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.6rem;
+  color: var(--midnight);
+  .swd-word {
+    &--1 {
+      letter-spacing: 0.13em;
+      opacity: 0.8;
+    }
+    &--2 {
+      letter-spacing: 0.36em;
+      opacity: 0.82;
+      margin-left: 0.07rem;
+    }
+  }
+  .swd-logo {
+    font-family: 'swd-icons', sans-serif;
+    color: var(--tomato);
+    font-size: 1.5rem;
+    &:before {
+      transform: translateY(0.15em);
+      margin-left: 0.25em;
+      margin-right: 0.25em;
+      margin-bottom: -0.34em;
+      position: relative;
+      display: inline-block;
+      content: '\e80b';
+    }
+  }
+  &:before {
+    transition: all 0.4s ease-in-out;
+    content: '';
+    display: block;
+    position: absolute;
+    opacity: 0;
+    top: calc(var(--logowidth) * -0.946);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    width: var(--logowidth);
+    height: var(--logowidth);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transform: translateY(-100%);
+  }
+  &.sticky {
+    &:before {
+      transform: translateY(-20%);
+      opacity: 1;
+      box-shadow: 0 0 0.5rem rgba(24, 40, 53, 0.8);
+    }
+    animation-name: slidedown;
+    position: fixed;
+    margin-top: -4rem;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    @mixin uptoMd {
+      z-index: 1001;
+    }
+    @mixin atMd {
+      z-index: 1000;
+    }
+  }
+}
+@keyframes slidedown {
+  0% {
+    margin-top: -4rem;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
