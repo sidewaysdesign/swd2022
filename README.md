@@ -1,3 +1,5 @@
+> Site rebuild using Astro & Svelte
+
 # Astro Starter Kit: Portfolio
 
 ```
