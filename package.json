@@ -28,6 +28,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.8",
     "cssnano": "^5.1.13",
-    "preact": "^10.10.2"
+    "preact": "^10.10.2",
+    "svelte-keystroke": "^1.0.3"
   }
 }

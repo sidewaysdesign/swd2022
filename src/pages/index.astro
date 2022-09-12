@@ -8,6 +8,9 @@ import Logomark from '../components/Logomark/Logomark.svelte';
 import WhatCanIDoForYou from '../components/WhatCanIDoForYou/WhatCanIDoForYou.svelte';
 import SecretSauce from '../components/SecretSauce/SecretSauce.astro';
 import Testimonials from '../components/Testimonials/Testimonials.svelte';
+import Tabs from '../components/Tabs/Tabs.svelte';
+import Footer from '../components/Footer/Footer.astro';
+
 
 // Data Fetching: List all Markdown postSo, s in the repo.
 const projects = await Astro.glob('./project/**/*.md');
@@ -34,6 +37,8 @@ const featuredProject = projects[0];
 	<WhatCanIDoForYou />
 	<SecretSauce />
 	<Testimonials client:load />
+	<Tabs client:load />
 </div>
+<Footer />
 </body>
 </html>

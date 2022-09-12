@@ -17,7 +17,6 @@
   ]
   onMount(() => animateTestimonials())
   const animateTestimonials = () => {
-    console.log(testimArr)
     const animHold = 12000
     const animTime = 600
     const animInterval = 750
@@ -26,8 +25,8 @@
     let unitIndex = 0
     const runAnim = () => {
       testimArr.forEach(u => {
-        u.classList.remove('xvisible')
-        u.classList.remove('xsharpen')
+        u.classList?.remove('visible')
+        u.classList?.remove('sharpen')
       })
       const t = testimArr[unitIndex]?.classList
       t.add('visible')
