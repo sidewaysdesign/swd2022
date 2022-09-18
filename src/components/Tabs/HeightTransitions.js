@@ -3,7 +3,11 @@ function initHeightTransition(container, activeClass) {
   current.classList.add(activeClass)
   container.style.minHeight = `${current.getBoundingClientRect().height}px`
 }
-
+function resizeHeight(container, activeClass = 'active') {
+  const current = container.querySelector(`:scope > .${activeClass}`)
+  const containerPadding = parseInt(getComputedStyle(container).paddingTop + getComputedStyle(container).paddingBottom)
+  container.style.minHeight = `${elementHeight(current) + containerPadding}px`
+}
 function heightTransition({ container, activeClass = 'active', fadeInClass = 'fadein', fadeOutClass = 'fadeout', requestedIndex }) {
   if (!container) return
   const element = container.firstElementChild
@@ -14,7 +18,7 @@ function heightTransition({ container, activeClass = 'active', fadeInClass = 'fa
     const current = container.querySelector(`:scope > .${activeClass}`)
     const other = container.children.item(requestedIndex)
     const currentIndex = Array.from(container.children).indexOf(current)
-    if (!current || currentIndex < 0 || currentIndex === requestedIndex) return
+    if (!current || currentIndex < 0 || currentIndex === requestedIndex) return // alert('doTransition')
     ;[current, other].forEach(el => [fadeInClass, fadeOutClass].forEach(c => el.classList.remove(c)))
 
     const currentHeight = elementHeight(current)
@@ -23,27 +27,34 @@ function heightTransition({ container, activeClass = 'active', fadeInClass = 'fa
     const otherPositioning = other.style.position
     // defer if height change is required to fully enclose current and other elements prior to transition
     const defer = currentHeight > otherHeight
-
     const doHeight = () => {
       // invoke height change
+      // alert('doHeight')
       current.style.position = 'absolute'
       other.style.position = 'absolute'
       const otherHeight = elementHeight(other)
-      container.style.minHeight = `${otherHeight}px`
+      const containerPadding = parseInt(getComputedStyle(container).paddingTop + getComputedStyle(container).paddingBottom)
+      container.style.minHeight = `${otherHeight + containerPadding}px`
     }
     const doTransition = () => {
       // start transition
+      // alert('doTransition')
+      ;[current, other].forEach(el => [fadeInClass, fadeOutClass].forEach(c => el.classList.remove(c)))
+
       other.classList.add(fadeInClass)
       current.classList.add(fadeOutClass)
       current.classList.remove(activeClass)
     }
     const doCleanup = () => {
       // end transition
+      // alert('doCleanup')
       ;[current, other].forEach(el => [fadeInClass, fadeOutClass].forEach(c => el.classList.remove(c)))
       other.classList.add(activeClass)
-      current.style.position = currentPositioning
-      other.style.position = otherPositioning
+      current.style.position = ''
+      other.style.position = ''
+      // setTimeout(() => { container.style.minHeight = null }, 1500)
     }
+
     setTimeout(doHeight, defer ? elementTransitionTime : 0, current, other, defer)
     setTimeout(doTransition, defer ? 0 : containerTransitionTime, current, other, defer)
     setTimeout(doCleanup, containerTransitionTime + elementTransitionTime, current, other, defer)
@@ -79,4 +90,4 @@ function switchElements(event) {
   })
 }
 
-export { initHeightTransition, heightTransition }
+export { initHeightTransition, heightTransition, resizeHeight }

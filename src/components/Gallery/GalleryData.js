@@ -17,7 +17,7 @@ const gallerySet = [
   {
     index: 'lgcot_site',
     title: ['Ladies’ Golf Club of Toronto', 'Ladies’ Golf Club of Toronto'],
-    links: ['http://www.ladiesgolfcluboftoronto.com'],
+    links: ['http://www.ladiesgolfclub.com'],
     description: ['This WordPress website tells its story across three long-form pages that feel like a sunny day on the links. Parallax scrolling helps showcase the beautiful course photography, and custom visual layout modules were developed to help edit and manage the up to 70 sections per page. Designed by and developed for TouchBase.'],
     images: ['pf_lgcot-thumbnail', 'pf_lgcot-monitor', 'pf_lgcot-tab1', 'pf_lgcot-tab2', 'pf_lgcot-tab3-blend'],
     tags: ['Custom Features', 'WordPress', 'Responsive']

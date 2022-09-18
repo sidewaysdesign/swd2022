@@ -8,7 +8,7 @@
     },
     {
       text: ['I have been working with Sideways Design for over a decade now. Richard has become an extension of my team in pretty much every job I’ve had. He is reliable, customer-centric and takes great pride in the work he does. Sideways Design is a trusted partner we can always rely on.'],
-      attribution: 'Gustavo Arruda, Head of Marketing - Dr. Bill'
+      attribution: 'Gustavo Arruda'
     },
     {
       text: [`Richard is a thinking designer, quick to grasp of the strategy behind the campaign. He seems to have a sixth sense of incorporating graphical elements that enhance the relevance to the target audience and objective.`, `Richard is quick to bring his knowledge to the table when a campaign subject is a familiar industry or sector. This is greatly appreciated especially if it challenges the established strategy. Richard also appreciates feedback and is quick to adjust his designs from input received.`, `The outcome is effective and results-oriented, representing the collective effort of the team and client; work that we are all proud of.`],

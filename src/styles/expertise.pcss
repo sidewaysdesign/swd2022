@@ -87,7 +87,8 @@ $rainbow7: #3d417f;
     margin-right: auto;
     /* background-color: white;
     position: relative;
-    padding: var(--outpad); */
+    */
+    padding: var(--outpad);
   }
   &--unit {
     box-sizing: border-box;
@@ -207,6 +208,9 @@ $rainbow7: #3d417f;
       .expertise--payload-contents {
         opacity: 1;
         max-height: 1000px;
+        ul {
+          margin-block-start: 0;
+        }
       }
     }
     @media not all and (hover: none) {
@@ -221,7 +225,7 @@ $rainbow7: #3d417f;
   }
   &--heading {
     box-sizing: border-box;
-    padding-right: 1rem;
+    padding-right: 0;
     letter-spacing: 0.018em;
     font-size: 1.2rem;
     font-weight: 400;

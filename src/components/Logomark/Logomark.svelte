@@ -6,7 +6,7 @@
   let sticky = false
 
   $: sticky = yPos > logoHeight
-  $: logoHeight = logo?.getBoundingClientRect().height
+  $: logoHeight = logo?.getBoundingClientRect().height + 200
 
   const updateHeight = () => (logoHeight = logo.getBoundingClientRect().height)
 

@@ -32,6 +32,8 @@
     font-family: 'swd-icons', sans-serif;
     color: var(--tomato);
     font-size: 1.5rem;
+    /* transition: all 400ms ease-in-out; */
+
     &:before {
       transform: translateY(0.15em);
       margin-left: 0.25em;
@@ -43,7 +45,7 @@
     }
   }
   &:before {
-    transition: all 400ms ease-in-out;
+    /* transition: all 400ms ease-in-out; */
     content: 'x';
     display: block;
     position: absolute;
@@ -66,10 +68,12 @@
     }
     animation-name: slidedown;
     position: fixed;
-    margin-top: -4rem;
-    animation-timing-function: linear;
+    /* margin-top: -4rem; */
+    animation-timing-function: ease-out;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
+    animation-duration: 0.75s;
+    /* animation-delay: 3s; */
     @mixin uptoMd {
       z-index: 1001;
     }
@@ -80,9 +84,9 @@
 }
 @keyframes slidedown {
   0% {
-    margin-top: -4rem;
+    transform: translateY(-4rem);
   }
   100% {
-    margin-top: 0;
+    transform: translateY(0);
   }
 }

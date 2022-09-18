@@ -1,11 +1,15 @@
+---
+import HelloTag from './HelloTag.svelte';
+---
+
 <section>
   <div class="semicircle"></div>
   <div class="circle--control">
     <div class="circle--container">
       <div class="fullcircle">
         <div class="introtext">
-          <div class="introtext--hellotag"></div>
-          <div class="introtext--text">…and I am Sideways Design, a full&#8209;stack designer and developer based in Toronto,&nbsp;Canada<span class="hide-above-smmd">.</span><span class="hide-below-smmd">, with 25+&nbsp;years in digital craftsmanship.</span></div>
+          <HelloTag client:load />
+          <div class="introtext--text">…and I am Sideways Design, a designer and front-end developer based in Toronto,&nbsp;Canada<span class="hide-above-smmd">.</span><span class="hide-below-smmd">, with 25+&nbsp;years in digital craftsmanship.</span></div>
         </div>
       </div>
     </div>
@@ -13,7 +17,7 @@
   <div class="circle--container--smaller">
     <div class="bubbleframe bubbleframe--small bubbleframe--first">
       <div id="swd_designicon"></div>
-      <p class="white">As a professional designer, I create the shape &amp; detail of your messaging to your clients.</p>
+      <p class="white">As an RGD-certified designer, I create the shape &amp; detail of your messaging to your clients.</p>
     </div>
     <div id="bringtolife" class="circle--container--smaller">
       <div class="bubbleframe bubbleframe--small bubbleframe--second">

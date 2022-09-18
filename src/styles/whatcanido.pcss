@@ -51,10 +51,14 @@
     z-index: 1;
     @mixin atSm {
       min-width: 90%;
-      margin-top: 1.875rem !important;
+      margin-top: 3.25rem !important;
       margin-bottom: 0.75rem;
       padding-left: 0.25rem;
       padding-right: 0.25rem;
+    }
+    @mixin atLg {
+      margin-top: 4rem !important;
+      margin-bottom: 1.75rem;
     }
   }
   p {
@@ -62,10 +66,8 @@
   }
 }
 .whatcanido-bkg {
-  /* background-color: $whatcanido-bkg; */
-  /* background-color: $arc_top_white; */
   background: linear-gradient(to bottom, var(--deepblue) 0%, var(--deepblue) 1rem, var(--deepblue-trans) 50%);
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 .whatcanido-mark {

@@ -7,8 +7,6 @@
   let isChrome
   let hasWebP
   let preferredExtension
-  let activeOverlay = false
-  let indexname = ''
   let overlayopen = false
   let overlayindex = 0
   let overlaycount = gallerySet.length
@@ -28,7 +26,7 @@
 <!-- preferredExtension (.jpg or .webp) is determined by userAgent and can therefore only be accessed post-mount -->
 {#if preferredExtension}
   {#each gallerySet as g, idx}
-    <div class="gallery__item" style={`background-image:url(${_relUrl(srcFileName(g.images[0], 600, preferredExtension), g.subdirectory)});`} data-index={g.index} on:click={() => openOverlay(idx)}>
+    <div class="gallery__item" style={`background-image:url(${_relUrl(srcFileName(g.images[0], 600, preferredExtension), g.subdirectory)});`} on:click={() => openOverlay(idx)}>
       <div class="pf-unit-content" data-after={g.title[0]} />
     </div>
   {/each}

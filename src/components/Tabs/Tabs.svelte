@@ -3,7 +3,7 @@
   import { onMount } from 'svelte'
   import { quintOut } from 'svelte/easing'
   // import TabGallery from './TabGallery.svelte'
-  import { initHeightTransition, heightTransition } from './HeightTransitions'
+  import { initHeightTransition, heightTransition, resizeHeight } from './HeightTransitions'
   import Expertise from '../Expertise/Expertise.svelte'
   import Gallery from '../Gallery/Gallery.svelte'
 
@@ -12,9 +12,7 @@
   let tabGalleryHeight
   let tabExpertiseHeight
   let tabSet
-  let activeClass = 'tabactive'
-
-  // const [send, receive] = crossfade({ duration: 3000 })
+  let activeClass = 'active'
 
   $: switched = !!tabPos
 
@@ -34,6 +32,7 @@
   const transitionEnd = num => {
     tabSet.style.maxHeight = 'auto'
   }
+  const updateTabContainerHeight = () => {}
 </script>
 
 <div class="tabs--toggle">
@@ -42,9 +41,11 @@
     <li on:click={() => transitionStart(1)} data-tab="tabs--skills" class={tabPos ? 'active' : ''}>Expertise</li>
   </ul>
 </div>
+<!-- <svelte:window on:resize={() => resizeHeight(tabSet, activeClass)} /> -->
+
 <div bind:this={tabSet} class="tabs--shell">
-  <div class="tabs--crossfade active"><Gallery /></div>
-  <div class="tabs--crossfade tabs--skills section-expertise">
-    <!-- <Expertise client:load /> -->
+  <div class="tabs--crossfade" class:active={!tabPos}><Gallery /></div>
+  <div class="tabs--crossfade tabs--skills section-expertise" class:active={tabPos}>
+    <Expertise />
   </div>
 </div>

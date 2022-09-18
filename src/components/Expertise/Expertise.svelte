@@ -1,4 +1,5 @@
 <script>
+  import OutClick from 'svelte-outclick'
   import cardSet from './ExpertiseData.js'
   import ExpertiseUnit from './ExpertiseUnit.svelte'
   import { onMount } from 'svelte'
@@ -19,10 +20,12 @@
   })
 </script>
 
-<div class="expertise--container">
-  {#each cardSet as card, idx}
-    <div class="expertise--unit" class:active={activeindex === idx} on:click={() => (activeindex = activeindex !== idx ? (activeindex = idx) : null)}>
-      <ExpertiseUnit expertise={card.expertise} heading={card.heading} imagedata={card.imagedata} />
-    </div>
-  {/each}
-</div>
+<OutClick on:outclick={() => (activeindex = null)}>
+  <div class="expertise--container">
+    {#each cardSet as card, idx}
+      <div class="expertise--unit" class:active={activeindex === idx} on:click={() => (activeindex = activeindex !== idx ? (activeindex = idx) : null)}>
+        <ExpertiseUnit expertise={card.expertise} heading={card.heading} imagedata={card.imagedata} />
+      </div>
+    {/each}
+  </div>
+</OutClick>
