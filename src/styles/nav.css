@@ -23,3 +23,28 @@ button#burger {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   width: 48px;
 }
+#menu li.has-divider {
+  margin-top: 1.5rem;
+}
+#menu li a span {
+  display: block;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .nav-underline span {
+    position: relative;
+  }
+  .nav-underline:hover span:after {
+    --tw-translate-y: 6px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 212 128 / var(--tw-bg-opacity));
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    width: 100%;
+  }
+}
