@@ -1,9 +1,0 @@
-<svg version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="110px" height="110px" viewBox="0 20 220 198" xml:space="preserve">
-          <g id="icon_ux">
-            <g>
-              <rect x="60" y="103.2" transform="matrix(0.3026 -0.9531 0.9531 0.3026 -28.9031 180.4994)" class="iconstroke" width="97.7" height="13.5"></rect>
-              <polygon class="iconstroke" points="195,71.3 183.3,64.5 167.1,92.3 150.8,64.5 139.2,71.3 159.3,105.7 135.9,146.2 147.5,153 167.2,119.1 187,153 198.7,146.2 175,105.7"></polygon>
-              <path class="iconstroke" d="M68.3,124.7c0,12.3-5.6,18.5-16.7,18.5s-16.7-6.2-16.7-18.5V67.9H21.3v56.8c0,19.7,11.6,32,30.2,32 s30.2-12.2,30.2-32V67.9H68.3V124.7z"></path>
-            </g>
-          </g>
-        </svg>

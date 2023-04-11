@@ -1,0 +1,78 @@
+:root {
+  font-family: Outfit, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #2a2a29;
+
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --richviolet: #6e4166;
+  --slategrey: #404241;
+  --dovegrey: #efefed;
+  --warmyellow: #f6c67e;
+  --mint: #435a55;
+  --spruce: #1f4051;
+  --taupe: #d4ccc4;
+  --surf: #107774;
+  --coralred: #de665d;
+  --sand: #e8e5e0;
+  --beige: #e8e5e0;
+  --aluminum: #979897;
+
+  --color-bg: #f9f9f8;
+  --color-body: #2a2a29;
+  --color-headings: var(--color-body);
+  --color-button: #ffd480;
+  --color-button-label: #2a2a29;
+  --color-button-hover: #f8c767;
+  --color-line: var(--color-body);
+  --gutter: 12px;
+  --section-x: 10px;
+  --section-y: 40px;
+  --section-y-mid: 55px;
+  --section-y-large: 75px;
+  --arrow: 80px;
+  --container-width: calc(100vw - var(--section-x) * 2);
+}
+
+a {
+  font-weight: 500;
+  color: var(--dovegrey);
+  text-decoration: inherit;
+  transition: color 0.15s ease-in-out;
+}
+a:hover {
+  color: var(--warmyellow);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family: Outfit, Arial, sans-serif;
+  line-height: 1.5;
+  tab-size: 4;
+}
+
+body {
+  margin: 0;
+  display: block;
+}
+
+/* 
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */

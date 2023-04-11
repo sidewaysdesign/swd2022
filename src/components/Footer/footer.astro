@@ -1,7 +1,38 @@
-<div class="footer">
- <div class="email_phone"><a href="mailto:richard@sidewaysdesign.com" class="email">richard@sidewaysdesign.com</a><a class="phone" href="tel:+14168850334">416-885-0334</a></div>
- <a href="https://www.twitter.com/sidewaysdesign" class="social social__twitter"></a><a href="https://www.linkedin.com/in/sidewaysdesign" class="social social__linkedin">&nbsp;</a>
- <p class="padbottom-3qtr">15 Phin Avenue, Toronto ON&ensp;Canada&ensp;M4J&nbsp;3T1</p>
- <p>© <span id="currentyear">2022</span> Sideways Design, all&nbsp;rights&nbsp;reserved.</p>
- <p>Certified RGD, member of the Association of <a target="swd" href="https://www.rgd.ca/">Registered Graphic Designers of Ontario</a></p>
-</div>
+---
+import FooterLogo from './FooterLogo.astro'
+import FooterSocial from './FooterSocial.astro'
+---
+
+<footer class="pt-6 pb-12 overflow-hidden section theme theme-taupe-dark no-pad-y lg:py-12">
+  <div class="mt-4 grid-container">
+    <div class="flex w-full flex-col md:flex-row items-start justify-between gap-6 md:gap-8">
+      <div class="w-full md:w-auto">
+        <a href="https://www.dr-bill.ca/" class="inline-block text-[45px]">
+          <span class="sr-only">Dr. Bill - home page</span>
+          <FooterLogo />
+        </a>
+      </div>
+      <div class="flex flex-col md:flex-row flex-wrap md:flex-nowrap items-start md:gap-8">
+        <div class="flex flex-col flex-wrap md:flex-nowrap">
+          <a class="block hover:underline focus:underline" target="" href="https://www.dr-bill.ca/privacy-policy">Privacy &amp; Security</a>
+          <a class="block hover:underline focus:underline" target="" href="https://www.dr-bill.ca/terms-and-conditions">Terms &amp; Conditions</a>
+          <a class="block md:auto hover:underline focus:underline" target="" href="https://www.dr-bill.ca/data-protection">Data Protection</a>
+        </div>
+        <div class="flex flex-col flex-wrap md:flex-nowrap">
+          <a class="w-full md:auto hover:underline focus:underline external" target="_blank" href="https://www.rbc.com/legal/">Legal</a>
+          <a class="w-full md:auto hover:underline focus:underline external" target="_blank" href="https://www.rbc.com/accessibility/index.html">Accessibility</a>
+        </div>
+      </div>
+      <div class="md:ml-auto flex flex-row gap-4"><FooterSocial /></div>
+    </div>
+  </div>
+  <div class="mt-6 grid-container">
+    <div class="w-full text-s md:text-center">
+      <p class="pb-2 md:pb-1">112 W Hastings St. Suite 400, Vancouver, BC&nbsp; V6B&nbsp;1G8</p>
+
+      © <script type="text/javascript">
+        document.write(new Date().getFullYear())
+      </script>, RBC Medical Billing Inc. ® / ™ Trademark(s) of Royal Bank of Canada. Used under licence.
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,36 @@
+#internal-posts {
+  --buttonmargin: 4.125rem;
+  --gutter: 18px;
+  transition: all 0.15s ease-in-out;
+
+  h2 {
+    margin-bottom: calc(var(--gutter) * 2);
+    @media screen and (min-width: 1024px) {
+      margin-top: calc(var(--gutter) * -1.5);
+    }
+  }
+  .grid-container {
+    gap: var(--gutter);
+    justify-content: center;
+    align-items: stretch;
+  }
+  article {
+    position: relative;
+    padding-bottom: var(--buttonmargin);
+    box-shadow: 0.5rem 0.5rem 0.75rem 1px rgba(0, 0, 0, 0.33);
+  }
+  .button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: var(--gutter);
+    box-sizing: border-box;
+    padding-top: 0.5625rem;
+    padding-bottom: 0.5625rem;
+  }
+  @media screen and (min-width: 600px) {
+    .container {
+      height: 220px;
+    }
+  }
+}

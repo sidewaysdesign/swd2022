@@ -1,44 +1,42 @@
 ---
 // Component Imports
-import MainHead from '../components/MainHead.astro';
-// import Button from '../components/Button/index.jsx';
-import Intro from '../components/Intro/Intro.astro';
-// import Footer from '../components/Footer/index.jsx';
-import Logomark from '../components/Logomark/Logomark.svelte';
-import WhatCanIDoForYou from '../components/WhatCanIDoForYou/WhatCanIDoForYou.svelte';
-import SecretSauce from '../components/SecretSauce/SecretSauce.astro';
-import Testimonials from '../components/Testimonials/Testimonials.svelte';
-import Tabs from '../components/Tabs/Tabs.svelte';
-import Footer from '../components/Footer/Footer.astro';
+import MainHead from '../components/MainHead.astro'
 
+import Header from '../components/Header/Header.astro'
+import Hero from '../components/Hero.astro'
+import InternalPosts from '../components/InternalPosts.astro'
+import PartnerPosts from '../components/PartnerPosts.astro'
+import Footer from '../components/Footer/Footer.astro'
+// import Everything from '../components/everything.astro'
 
-// Data Fetching: List all Markdown postSo, s in the repo.
-// const projects = await Astro.glob('./project/**/*.md');
-// const featuredProject = projects[0];
+import '../styles/base.css'
+import '../styles/root.pcss'
+import '../styles/typography.css'
+import '../styles/button.css'
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+import '../styles/hero.css'
+import '../styles/internalposts.css'
+import '../styles/partnerposts.pcss'
+import '../styles/nav.css'
+// import '../styles/everything.css'
+import '../components/Footer/footer.pcss'
 ---
 
 <html lang="en">
-<head>
-	<MainHead
-	title="Sideways Design"
-	description="Portfolio website for Sideways Design, a web &amp; print design and development agency."
-	/>
-</head>
-<body>
-	<div class="fullwrapper">
-	<Logomark client:load />
-	<Intro />
-	 <div class="whatcanido">
-        <h2>What can I do <span class="nobreak">for you?</span></h2>
-      </div>
-	<WhatCanIDoForYou />
-	<SecretSauce />
-	<Testimonials client:load />
-	<Tabs client:load />
-</div>
-<Footer />
-</body>
+  <head>
+    <MainHead title="Dr.Bill" />
+  </head>
+  <body class="home page-template-default page page-id-9492 wp-embed-responsive">
+    <Header />
+    <Hero />
+    <InternalPosts />
+    <PartnerPosts />
+    <!-- <Everything /> -->
+    <Footer />
+    <script>
+      import '/src/scripts/main.js'
+      import '/src/scripts/truncate.js'
+      import '/src/scripts/arialabels.js'
+    </script>
+  </body>
 </html>

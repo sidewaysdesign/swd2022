@@ -1,0 +1,239 @@
+---
+import Logo from './Logo.astro'
+---
+
+<header class="relative z-40 theme theme-slate no-pad-y section">
+  <div class="flex items-center theme-slate w-full h-full overflow-hidden grid-container lg:overflow-visible">
+    <div class="block lg:mr-16" role="banner">
+      <a id="logo" class="text-[29px] lg:text-[33px]" href="https://www.dr-bill.ca" rel="home">
+        <span class="sr-only">Dr. Bill</span>
+        <Logo />
+      </a>
+    </div>
+    <nav id="nav-main" class="font-medium z-40 relative flex h-[80px] justify-end w-full text-[27px] md:text-lg md:pr-[54px] lg:pr-0 theme theme-slate" role="navigation">
+      <div id="main-menu" class="flex items-center">
+        <button id="burger" aria-expanded="false" aria-controls="menu">
+          <span class="sr-only">Toggle menu</span>
+          <figure class="open">
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+          </figure>
+          <figure class="close">
+            <svg height="1em" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.95312 2.45404L21.045 21.5459" stroke="#F9F9F8" stroke-width="3" stroke-linecap="round"></path>
+              <path d="M1.95312 21.546L21.045 2.45408" stroke="#F9F9F8" stroke-width="3" stroke-linecap="round"></path>
+            </svg>
+          </figure>
+        </button>
+        <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+        <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible">
+          <ul id="menu" class="z-40 w-full lg:w-auto hidden lg:flex flex flex-col lg:flex-row lg:flex lg:relative lg:items-center lg:w-auto transform transition-transform duration-300 bg-slate lg:bg-transparent">
+            <li data-level="0" class="text-dove flex group lg:block w-full lg:overflow-visible lg:w-auto menu-item menu-item-type-custom menu-item-object-custom">
+              <a class="hidden lg:flex w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 lg:bg-slate py-6" href="#product">
+                <span class="block mr-2 pointer-events-none"> Product</span>
+                <i class="relative block pt-1 transform -rotate-90 lg:rotate-0 text-[6px]"
+                  ><svg class="block" width="1.33333333333em" height="1em" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L0.535898 -6.52533e-07L7.4641 -4.68497e-08L4 6Z" fill="currentColor"></path>
+                  </svg>
+                </i>
+              </a>
+              <button data-dropdown="0" class="relative block w-full px-4 py-4 font-medium text-left lg:hidden"
+                ><span class="inline-block mr-2 pointer-events-none">Product</span><i class="absolute block transform -rotate-90 right-0 mr-4 -translate-y-1/2 top-1/2 text-[8px]"
+                  ><svg class="block" width="1.33333333333em" height="1em" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L0.535898 -6.52533e-07L7.4641 -4.68497e-08L4 6Z" fill="currentColor"></path>
+                  </svg>
+                </i></button
+              >
+              <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+              <ul data-submenu="" class="z-40 w-full lg:w-auto hidden lg:flex absolute h-screen lg:h-auto lg:left-auto bg-slate lg:rounded-b-[10px] lg:shadow-menu lg:group-focus-within:flex lg:group-hover:flex pb-5 pt-0 left-full top-0 lg:top-auto lg:px-6 flex-none flex-col lg:hidden">
+                <button data-back="0" class="block px-4 py-3 text-base font-medium text-left uppercase lg:hidden text-yellow">BACK</button>
+                <li data-level="1" class="text-dove flex lg:flex items-start flex-none lg:pt-6 no-divider menu-item menu-item-type-post_type menu-item-object-page">
+                  <a class="hidden lg:flex w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 lg:bg-slate flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/physicians/ontario" style="width: 158px;">
+                    <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> Physicians</span>
+                  </a>
+                  <button data-dropdown="1" class="relative block w-full px-4 py-4 font-medium text-left lg:hidden"
+                    ><span class="inline-block mr-2 pointer-events-none">Physicians</span><i class="absolute block transform -rotate-90 right-0 mr-4 -translate-y-1/2 top-1/2 text-[8px]"
+                      ><svg class="block" width="1.33333333333em" height="1em" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6L0.535898 -6.52533e-07L7.4641 -4.68497e-08L4 6Z" fill="currentColor"></path>
+                      </svg>
+                    </i></button
+                  >
+                  <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                  <ul data-submenu="" class="z-40 w-full lg:w-auto hidden lg:flex flex-none flex-col pl-0 lg:pl-5 top-0 left-full lg:left-auto absolute lg:relative hidden lg:flex bg-slate lg:bg-transparent h-screen lg:h-auto">
+                    <button data-back="1" class="block px-4 py-3 text-base font-medium text-left uppercase lg:hidden text-yellow">BACK</button>
+                    <li class="text-dove flex menu-item menu-item-type-post_type menu-item-object-page">
+                      <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/physicians/ontario">
+                        <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> Ontario</span>
+                      </a>
+                      <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                      <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                    </li>
+                    <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+                    <li class="text-dove flex menu-item menu-item-type-post_type menu-item-object-page">
+                      <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/physicians/alberta-bc">
+                        <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> British Columbia + Alberta</span>
+                      </a>
+                      <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                      <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                    </li>
+                    <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+                    <li class="text-dove flex menu-item menu-item-type-post_type menu-item-object-page">
+                      <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/physicians/newly-practicing">
+                        <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> Newly Practicing</span>
+                      </a>
+                      <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                      <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                    </li>
+                  </ul>
+                </li>
+                <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+                <li data-level="1" class="text-dove flex lg:flex items-start flex-none lg:pt-6 no-divider menu-item menu-item-type-post_type menu-item-object-page">
+                  <a class="hidden lg:flex w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 lg:bg-slate flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/teams/ontario" style="width: 158px;">
+                    <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> Teams</span>
+                  </a>
+                  <button data-dropdown="1" class="relative block w-full px-4 py-4 font-medium text-left lg:hidden"
+                    ><span class="inline-block mr-2 pointer-events-none">Teams</span><i class="absolute block transform -rotate-90 right-0 mr-4 -translate-y-1/2 top-1/2 text-[8px]"
+                      ><svg class="block" width="1.33333333333em" height="1em" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6L0.535898 -6.52533e-07L7.4641 -4.68497e-08L4 6Z" fill="currentColor"></path>
+                      </svg>
+                    </i></button
+                  >
+                  <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                  <ul data-submenu="" class="z-40 w-full lg:w-auto hidden lg:flex flex-none flex-col pl-0 lg:pl-5 top-0 left-full lg:left-auto absolute lg:relative hidden lg:flex bg-slate lg:bg-transparent h-screen lg:h-auto">
+                    <button data-back="1" class="block px-4 py-3 text-base font-medium text-left uppercase lg:hidden text-yellow">BACK</button>
+                    <li class="text-dove flex menu-item menu-item-type-post_type menu-item-object-page">
+                      <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/teams/ontario">
+                        <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> Ontario</span>
+                      </a>
+                      <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                      <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                    </li>
+                    <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+                    <li class="text-dove flex menu-item menu-item-type-post_type menu-item-object-page">
+                      <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/teams/alberta-bc">
+                        <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> British Columbia + Alberta</span>
+                      </a>
+                      <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                      <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                    </li>
+                  </ul>
+                </li>
+                <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+                <li class="text-dove flex menu-item menu-item-type-post_type menu-item-object-page">
+                  <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/moa-billing-agents">
+                    <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> MOAs + Billing Agents</span>
+                  </a>
+                  <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                  <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                </li>
+                <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+                <li class="text-dove flex menu-item menu-item-type-post_type menu-item-object-page">
+                  <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/download-app">
+                    <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> Download the App</span>
+                  </a>
+                  <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                  <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                </li>
+              </ul>
+            </li>
+            <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+            <li data-level="0" class="text-dove flex group lg:block w-full lg:overflow-visible lg:w-auto menu-item menu-item-type-post_type menu-item-object-page">
+              <a class="hidden lg:flex w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 lg:bg-slate py-6" href="https://www.dr-bill.ca/resources">
+                <span class="block mr-2 pointer-events-none"> Resources</span>
+                <i class="relative block pt-1 transform -rotate-90 lg:rotate-0 text-[6px]"
+                  ><svg class="block" width="1.33333333333em" height="1em" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L0.535898 -6.52533e-07L7.4641 -4.68497e-08L4 6Z" fill="currentColor"></path>
+                  </svg>
+                </i>
+              </a>
+              <button data-dropdown="0" class="relative block w-full px-4 py-4 font-medium text-left lg:hidden"
+                ><span class="inline-block mr-2 pointer-events-none">Resources</span><i class="absolute block transform -rotate-90 right-0 mr-4 -translate-y-1/2 top-1/2 text-[8px]"
+                  ><svg class="block" width="1.33333333333em" height="1em" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L0.535898 -6.52533e-07L7.4641 -4.68497e-08L4 6Z" fill="currentColor"></path>
+                  </svg>
+                </i></button
+              >
+              <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+              <ul data-submenu="" class="z-40 w-full lg:w-auto hidden lg:flex absolute h-screen lg:h-auto lg:left-auto bg-slate lg:rounded-b-[10px] lg:shadow-menu lg:group-focus-within:flex lg:group-hover:flex pb-5 pt-0 left-full top-0 lg:top-auto lg:px-6 flex-none flex-col lg:hidden" style="">
+                <button data-back="0" class="block px-4 py-3 text-base font-medium text-left uppercase lg:hidden text-yellow">BACK</button>
+                <li data-level="1" class="text-dove flex lg:flex items-start flex-none lg:pt-6 menu-item menu-item-type-post_type menu-item-object-page">
+                  <a class="hidden lg:flex w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 lg:bg-slate flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/resources" style="width: 213px;">
+                    <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> Resource Library</span>
+                  </a>
+                  <button data-dropdown="1" class="relative block w-full px-4 py-4 font-medium text-left lg:hidden"
+                    ><span class="inline-block mr-2 pointer-events-none">Resource Library</span><i class="absolute block transform -rotate-90 right-0 mr-4 -translate-y-1/2 top-1/2 text-[8px]"
+                      ><svg class="block" width="1.33333333333em" height="1em" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6L0.535898 -6.52533e-07L7.4641 -4.68497e-08L4 6Z" fill="currentColor"></path>
+                      </svg>
+                    </i></button
+                  >
+                  <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                  <ul data-submenu="" class="z-40 w-full lg:w-auto hidden lg:flex flex-none flex-col pl-0 lg:pl-5 top-0 left-full lg:left-auto absolute lg:relative hidden lg:flex bg-slate lg:bg-transparent h-screen lg:h-auto" style="">
+                    <button data-back="1" class="block px-4 py-3 text-base font-medium text-left uppercase lg:hidden text-yellow">BACK</button>
+                    <li class="text-dove flex menu-item menu-item-type-post_type menu-item-object-page">
+                      <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/resources/guides">
+                        <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> Guides</span>
+                      </a>
+                      <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                      <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                    </li>
+                    <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+                    <li class="text-dove flex menu-item menu-item-type-post_type menu-item-object-page">
+                      <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/resources/ebooks">
+                        <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> eBooks</span>
+                      </a>
+                      <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                      <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                    </li>
+                    <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+                    <li class="text-dove flex menu-item menu-item-type-post_type menu-item-object-page">
+                      <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/blog">
+                        <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> Blog</span>
+                      </a>
+                      <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                      <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                    </li>
+                  </ul>
+                </li>
+                <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+                <figure class="hidden lg:block relative z-10 w-[calc(100%-4rem)] top-4 left-8 h-[1px] bg-[#959595]"></figure>
+                <li class="text-dove flex has-divider menu-item menu-item-type-post_type menu-item-object-page">
+                  <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/rbc-healthcare-advantage">
+                    <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> RBC Healthcare Advantage</span>
+                  </a>
+                  <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                  <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                </li>
+                <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+                <figure class="hidden lg:block relative z-10 w-[calc(100%-4rem)] top-4 left-8 h-[1px] bg-[#959595]"></figure>
+                <li class="text-dove flex has-divider menu-item menu-item-type-custom menu-item-object-custom">
+                  <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://support.dr-bill.ca/en/">
+                    <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> Support Centre</span>
+                  </a>
+                  <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                  <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                </li>
+                <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+                <figure class="hidden lg:block relative z-10 w-[calc(100%-4rem)] top-4 left-8 h-[1px] bg-[#959595]"></figure>
+                <li class="text-dove flex has-divider menu-item menu-item-type-post_type menu-item-object-page">
+                  <a class="w-full flex-none lg:w-auto relative z-10 items-center nav-underline px-4 lg:px-6 xl:px-8 flex-none py-3 whitespace-nowrap min-w-[70px] w-auto flex-none" href="https://www.dr-bill.ca/covid-19-resource-centre">
+                    <span class="block mr-2 pointer-events-none whitespace-normal lg:whitespace-nowrap"> COVID-19 Resource Centre</span>
+                  </a>
+                  <!-- <div class="hidden lg:inline-block left-[100%] left-[200%] left-[300%]"/> -->
+                  <div class="pr-4 lg:pr-0 hidden lg:block fixed inset-0 w-full lg:w-auto h-[calc(100vh-80px)] top-[80px] lg:top-auto lg:h-auto bg-slate lg:bg-transparent lg:relative overflow-y-auto overflow-x-hidden lg:overflow-visible"></div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <ul class="contact-button">
+          <li class="">
+            <a class="button small whitespace-nowrap" href="https://www.dr-bill.ca/contact" target="_blank" rel="noopener">Contact Us</a>
+          </li>
+        </ul>
+        <figure class="block lg:hidden flex-none h-[1px] bg-[#959595]" style="margin-left:20px; width:calc(100% - 20px)"></figure>
+      </div>
+    </nav>
+  </div>
+</header>

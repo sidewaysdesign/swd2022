@@ -1,0 +1,45 @@
+.text-title {
+  font-size: 46px;
+  line-height: 1.08695652174;
+}
+.lg\:text-title-lg {
+  font-size: 58px;
+  line-height: 1.12903225806;
+}
+.prose {
+  color: var(--tw-prose-body);
+  max-width: 65ch;
+}
+.prose-lg {
+  font-size: 1.125rem;
+  line-height: 1.7777778;
+}
+.lg\:prose-xl {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.text-title {
+  font-size: 46px;
+  line-height: 1.08695652174;
+}
+
+@media screen and (min-width: 768px) {
+  .md\:text-title-md {
+    font-size: 52px;
+    line-height: 1.08695652174;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .lg\:text-title-lg {
+    font-size: 58px;
+    line-height: 1.12903225806;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:text-title-xl {
+    font-size: 62px;
+    line-height: 1.12903225806;
+  }
+}

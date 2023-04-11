@@ -1,0 +1,324 @@
+:root {
+  font-family: Outfit, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  /* color: rgba(255, 255, 255, 0.87); */
+  color: #2a2a29;
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --richviolet: #6e4166;
+  --charcoal: #2a2a29;
+  --slategrey: #404241;
+  --dovegrey: #efefed;
+  --warmyellow: #f6c67e;
+  --mint: #435a55;
+  --spruce: #1f4051;
+  --taupe: #d4ccc4;
+  --surf: #107774;
+  --coralred: #de665d;
+  --sand: #e8e5e0;
+  --beige: #e8e5e0;
+  --aluminum: #979897;
+
+  --bp-small: 640px;
+  --bp-medium: 768px;
+  --bp-large: 920px;
+  --bp-xl: 1024px;
+
+  --radius: 0.75rem;
+}
+.section {
+  width: 100%;
+}
+.section:not(.no-pad-x) {
+  padding-left: var(--section-x);
+  padding-right: var(--section-x);
+}
+.section:not(.no-pad-y) {
+  padding-bottom: var(--section-y);
+  padding-top: var(--section-y);
+}
+
+.grid-container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .grid-container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .grid-container {
+    max-width: 1536px;
+  }
+}
+
+.grid-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(var(--gutter) / 2);
+  padding-right: calc(var(--gutter) / 2);
+}
+
+#main {
+  background-color: var(--dovegrey);
+  color: var(--slategrey);
+}
+
+.bg-surf {
+  background-color: var(--surf);
+}
+
+.pb-100pct {
+  padding-bottom: 100%;
+}
+.pl-6 {
+  padding-left: 1.5rem;
+}
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.contact-button {
+  margin-left: 2rem;
+  transform: translate(-1.5rem, -0.25rem);
+  @media screen and (min-width: 768px) {
+    transform: translate(0.5rem, 0);
+  }
+}
+.contact-button + figure {
+  @media screen and (min-width: 768px) {
+    visibility: hidden;
+  }
+}
+.button,
+.button a,
+.button button {
+  &:hover {
+    cursor: pointer;
+    user-select: none;
+  }
+}
+#burger {
+  @media screen and (min-width: 768px) {
+    margin-top: 0.125rem;
+  }
+}
+.theme-slate {
+  background-color: var(--charcoal);
+}
+
+.theme-violet {
+  background-color: var(--richviolet);
+}
+.leading-1pt5 {
+  line-height: 1.5;
+}
+
+.halfcircle-top,
+.halfcircle-bottom {
+  --circlehalf: 40vw;
+  --circlefull: 80vw;
+  z-index: 0;
+  position: absolute;
+  left: calc(50% - var(--circlehalf));
+  width: var(--circlefull);
+  height: var(--circlefull);
+  overflow: hidden;
+  &:before {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: var(--circlefull);
+    border-radius: 50%;
+  }
+}
+.halfcircle-bottom {
+  z-index: 1;
+  &:before {
+    background: rgba(255, 255, 255, 0.2);
+    top: calc(var(--circlehalf) * -1);
+  }
+}
+.halfcircle-top {
+  top: auto;
+  bottom: 0;
+  &:before {
+    background: rgba(255, 255, 255, 0.07);
+    top: auto;
+    bottom: calc(var(--circlehalf) * -1);
+  }
+}
+@media (min-width: 1024px) {
+  .halfcircle-top,
+  .halfcircle-bottom {
+    --circlefull: 900px;
+    --circlehalf: 450px;
+  }
+}
+.underline-offset {
+  text-decoration-line: underline !important;
+  text-underline-offset: 0.2em !important;
+}
+.highlight {
+  /* outline: 0.1em solid rgba(55, 32, 51, 0.5); */
+  /* background-color: rgba(55, 32, 51, 0.5); */
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+  text-decoration-skip-ink: none;
+}
+.text-dovewhite .highlight {
+  text-decoration-color: rgba(255, 255, 255, 0.7);
+}
+sup {
+  font-size: 75%;
+  bottom: 0.1ex;
+  /* outline: 2px solid red;
+  outline-offset: 4px; */
+}
+.button-reverse {
+  background-color: var(--charcoal) !important;
+  color: var(--color-button) !important;
+}
+.text-yellow {
+  --tw-text-opacity: 1;
+  color: rgb(255 212 128 / var(--tw-text-opacity));
+}
+.text-body {
+  color: var(--color-body);
+}
+
+.text-slate {
+  --tw-text-opacity: 1;
+  color: rgb(42 42 41 / var(--tw-text-opacity));
+}
+.text-dove {
+  --tw-text-opacity: 1;
+  color: rgb(249 249 248 / var(--tw-text-opacity));
+}
+
+.text-dovewhite {
+  --tw-text-opacity: 1;
+  color: var(--dovegrey);
+}
+.text-bg {
+  color: var(--color-bg);
+}
+
+.bg-grey-lighter {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 239 237 / var(--tw-bg-opacity));
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-dove {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 249 248 / var(--tw-bg-opacity));
+}
+.bg-bg {
+  background-color: var(--color-bg);
+}
+.bg-\[\#DEDFDA\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(222 223 218 / var(--tw-bg-opacity));
+}
+.bg-line {
+  background-color: var(--color-line);
+}
+.bg-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 212 128 / var(--tw-bg-opacity));
+}
+.bg-darkviolet {
+  background-color: var(--darkviolet);
+}
+.bg-violet {
+  background-color: var(--richviolet);
+}
+.bg-taupe {
+  --tw-bg-opacity: 1;
+  background-color: var(--taupe);
+}
+.bg-taupe-mid {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 237 232 / var(--tw-bg-opacity));
+}
+.bg-grey-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 237 237 / var(--tw-bg-opacity));
+}
+.bg-navy {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 64 81 / var(--tw-bg-opacity));
+}
+.bg-violet {
+  --tw-bg-opacity: 1;
+  background-color: rgb(110 65 102 / var(--tw-bg-opacity));
+}
+.bg-cyan {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 119 116 / var(--tw-bg-opacity));
+}
+.bg-slate {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 42 41 / var(--tw-bg-opacity));
+}
+.bg-violet-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 94 139 / var(--tw-bg-opacity));
+}
+.text-slate {
+  --tw-text-opacity: 1;
+  color: rgb(42 42 41 / var(--tw-text-opacity));
+}
+.text-dovewhite {
+  --tw-text-opacity: 1;
+  color: var(--dovegrey);
+}
+.text-violet {
+  --tw-text-opacity: 1;
+  color: rgb(110 65 102 / var(--tw-text-opacity));
+}
+.text-warmyellow {
+  --tw-text-opacity: 1;
+  color: var(--warmyellow);
+}
+.text-bg {
+  color: var(--color-bg);
+}
